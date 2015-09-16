@@ -1,0 +1,62 @@
+﻿<Window x:Name="MainGameWindow" x:Class="AlphaAndNumbers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlphaAndNumbers"
+        mc:Ignorable="d"
+        Title="ABC Game" Height="438" Width="525" Loaded="MainWindow1_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="57"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="NextButton" Content="&gt;" HorizontalAlignment="Right" Width="24" BorderBrush="{x:Null}" Foreground="Black" RenderTransformOrigin="0.458,0.502" Click="NextButton_Click" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFBDBDBD" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.25"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <BlurEffect KernelType="Box" Radius="1"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="PreviousButton" Content="&lt;" BorderBrush="{x:Null}" Foreground="Black" RenderTransformOrigin="0.458,0.502" HorizontalAlignment="Left" Width="24" Click="PreviousButton_Click" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="270" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFBDBDBD"/>
+                    <GradientStop Color="White" Offset="0.85"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <BlurEffect KernelType="Box" Radius="1"/>
+            </Button.Effect>
+        </Button>
+        <Image x:Name="FlashCardImage" HorizontalAlignment="Center" Height="240" Margin="24,34,29,0" VerticalAlignment="Top" Width="464" MouseLeftButtonUp="FlashCardImage_MouseLeftButtonUp" />
+        <Button x:Name="RandButton1" Content="Button" Margin="29,0,0,22" Click="RandButton1_Click" Background="#FFECECEC" Grid.RowSpan="2" Height="62" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="71" BorderBrush="{x:Null}" FontSize="18.667"/>
+        <Button x:Name="RandButton2" Content="Button" Margin="220,0,0,22" Click="RandButton2_Click" BorderBrush="{x:Null}" Background="#FFECECEC" Grid.RowSpan="2" Height="62" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="71" FontSize="18.667"/>
+        <Button x:Name="RandButton3" Content="Button" Margin="0,0,29,22" Click="RandButton3_Click" Background="#FFECECEC" Grid.RowSpan="2" Height="62" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="71" BorderBrush="{x:Null}" FontSize="18.667"/>
+
+    </Grid>
+</Window>
